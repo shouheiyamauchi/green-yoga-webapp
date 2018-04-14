@@ -1,8 +1,12 @@
 <template>
-  <div>
-    <nav-bar :routes="routes"></nav-bar>
-    <main-content></main-content>
-  </div>
+  <transition name="fade">
+    <div v-if="!this.mounted">
+      <nav-bar :routes="routes" :padding="navPadding"></nav-bar>
+      <transition name="fade">
+        <main-content></main-content>
+      </transition>
+    </div>
+  </transition>
 </template>
 
 <script>
@@ -18,11 +22,45 @@ export default {
   },
   data () {
     return {
-      routes
+      mounted: true,
+      routes,
+      navPadding: !(this.$route.name === 'HOME')
+    }
+  },
+  mounted () {
+    this.$nextTick(() => {
+      this.mounted = false
+    })
+  },
+  watch: {
+    $route () {
+      this.navPadding = !(this.$route.name === 'HOME')
     }
   }
 }
 </script>
 
 <style>
+@font-face {
+  font-family: "Open Sans Condensed";
+  src: url('./assets/OpenSansCondensed-Light.ttf');
+}
+
+* {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 1.5s
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
 </style>
