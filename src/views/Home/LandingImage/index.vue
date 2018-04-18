@@ -1,5 +1,5 @@
 <template>
-  <div :style="style"></div>
+  <div class="landing-image" :style="style"></div>
 </template>
 
 <script>
@@ -14,8 +14,8 @@ export default {
 </script>
 
 <style scoped>
-div {
-  height: 100vh;
+.landing-image {
+  height: calc(100vh - 64px);
   width: 100vw;
   position: absolute;
   background-repeat: no-repeat;

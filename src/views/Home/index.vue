@@ -3,6 +3,36 @@
     <transition name="fade">
       <landing-image :backgroundImage="backgroundImage" :key="backgroundImage"></landing-image>
     </transition>
+    <div class="content-spacer">
+    </div>
+    <div style="height: 100vh;">
+      HELLO
+      <br />
+      HELLO
+      <br />HELLO
+      <br />HELLO
+      <br />HELLO
+      <br />HELLO
+      <br />HELLO
+      <br />HELLO
+      <br />HELLO
+      <br />HELLO
+      <br />HELLO
+      <br />HELLO
+      <br />HELLO
+      <br />HELLO
+      <br />HELLO
+      <br />HELLO
+      <br />HELLO
+      <br />HELLO
+      <br />HELLO
+      <br />HELLO
+      <br />HELLO
+      <br />HELLO
+      <br />HELLO
+      <br />HELLO
+      <br />
+    </div>
   </div>
 </template>
 
@@ -27,7 +57,7 @@ export default {
   mounted () {
     this.$nextTick(() => {
       this.changeBackground()
-      setInterval(this.changeBackground, 3000)
+      setInterval(this.changeBackground, 3500)
     })
   },
   methods: {
@@ -42,3 +72,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.content-spacer {
+  height: 100vh;
+}
+</style>
