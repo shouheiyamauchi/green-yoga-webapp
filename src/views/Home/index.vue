@@ -1,10 +1,6 @@
 <template>
   <div>
-    <transition name="fade">
-      <landing-image :backgroundImage="backgroundImage" :key="backgroundImage"></landing-image>
-    </transition>
-    <div class="content-spacer">
-    </div>
+    <landing-image :backgroundImage="backgroundImage"></landing-image>
     <div style="height: 100vh;">
       HELLO
       <br />
@@ -43,7 +39,7 @@ const importAll = r => {
   return r.keys().map(r)
 }
 
-const images = importAll(require.context('../../../public/landing/', false, /\.jpg$/))
+const images = importAll(require.context('../../assets/images/landing/', false, /\.jpg$/))
 
 export default {
   components: {
@@ -73,8 +69,5 @@ export default {
 }
 </script>
 
-<style scoped>
-.content-spacer {
-  height: 100vh;
-}
+<style>
 </style>

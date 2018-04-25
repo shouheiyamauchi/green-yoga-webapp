@@ -1,25 +1,27 @@
 <template>
-  <div class="landing-image" :style="style"></div>
+  <div class="container">
+    <transition name="fade">
+      <transition-image :backgroundImage="backgroundImage" :key="backgroundImage"></transition-image>
+    </transition>
+  </div>
 </template>
 
 <script>
+import TransitionImage from './TransitionImage'
+
 export default {
-  props: ['backgroundImage'],
-  computed: {
-    style () {
-      return 'background-image: url(' + this.backgroundImage + ')'
-    }
-  }
+  components: {
+    TransitionImage
+  },
+  props: ['backgroundImage']
 }
 </script>
 
 <style scoped>
-.landing-image {
+.container {
   height: calc(100vh - 64px);
   width: 100vw;
-  position: absolute;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
+  position: relative;
+  margin: 0px;
 }
 </style>
