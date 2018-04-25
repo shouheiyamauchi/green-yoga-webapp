@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="transition-image-container">
     <transition name="fade">
       <transition-image :backgroundImage="backgroundImage" :key="backgroundImage"></transition-image>
     </transition>
@@ -18,10 +18,10 @@ export default {
 </script>
 
 <style scoped>
-.container {
+.transition-image-container {
+  perspective: 1px;
   height: calc(100vh - 64px);
   width: 100vw;
   position: relative;
-  margin: 0px;
 }
 </style>
