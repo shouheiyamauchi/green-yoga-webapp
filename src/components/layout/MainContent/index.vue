@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="wrapper">
     <header-image v-if="!($route.name === 'HOME')" :header-image="headerImage"></header-image>
     <router-view></router-view>
     <div style="height: 100vh;">
@@ -49,8 +49,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
+.wrapper {
   position: absolute;
-  width: 100%;
+  width: 100vw;
 }
 </style>

@@ -30,7 +30,7 @@ export default {
 <style lang="scss" scoped>
 .landing-image {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   position: absolute;
   background-repeat: no-repeat;
   background-position: 50% 50%;

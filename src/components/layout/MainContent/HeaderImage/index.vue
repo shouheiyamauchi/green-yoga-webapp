@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="wrapper">
     <div ref="header-image" class="header-image" :style="style"></div>
   </div>
 </template>
@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
+.wrapper {
   position: relative;
   overflow: hidden;
 }

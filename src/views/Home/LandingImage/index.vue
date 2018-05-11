@@ -20,7 +20,7 @@ export default {
 <style lang="scss" scoped>
 .transition-image-container {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   overflow: hidden;
   position: relative;
 }
