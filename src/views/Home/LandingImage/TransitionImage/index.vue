@@ -1,13 +1,27 @@
 <template>
-  <div class="landing-image" :style="style"></div>
+  <div ref="landing-image" class="landing-image" :style="style"></div>
 </template>
 
 <script>
 export default {
+  created () {
+    window.addEventListener('scroll', this.adjustBackgroundPosition);
+  },
+  mounted () {
+    this.adjustBackgroundPosition()
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.adjustBackgroundPosition);
+  },
   props: ['backgroundImage'],
   computed: {
     style () {
       return 'background-image: url(' + this.backgroundImage + ')'
+    }
+  },
+  methods: {
+    adjustBackgroundPosition () {
+      this.$refs['landing-image'].style.transform = `translate3d(0px, ${window.scrollY / 3}px, 0px)`
     }
   }
 }
@@ -15,15 +29,11 @@ export default {
 
 <style lang="scss" scoped>
 .landing-image {
-  height: calc(100vh - 56px);
-  width: 100vw;
+  height: 100vh;
+  width: 100%;
   position: absolute;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
-
-  @media only screen and (min-width: 601px) {
-    height: calc(100vh - 64px);
-  }
 }
 </style>

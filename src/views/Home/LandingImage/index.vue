@@ -17,11 +17,11 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .transition-image-container {
-  perspective: 1px;
-  height: calc(100vh - 64px);
-  width: 100vw;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
   position: relative;
 }
 </style>

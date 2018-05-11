@@ -1,9 +1,9 @@
 <template>
   <transition name="fade">
     <div v-if="!this.mounted">
-      <nav-bar :routes="routes" :padding="navPadding"></nav-bar>
+      <nav-bar :routes="routes"></nav-bar>
       <transition name="fade">
-        <main-content></main-content>
+        <main-content :key="$route.name"></main-content>
       </transition>
     </div>
   </transition>
@@ -16,7 +16,6 @@ import MainContent from './components/layout/MainContent'
 import routes from './router/routes'
 
 export default {
-  name: 'app',
   components: {
     NavBar,
     MainContent
@@ -24,8 +23,7 @@ export default {
   data () {
     return {
       mounted: true,
-      routes,
-      navPadding: !(this.$route.name === 'HOME')
+      routes
     }
   },
   mounted () {
@@ -35,7 +33,11 @@ export default {
   },
   watch: {
     $route () {
-      this.navPadding = !(this.$route.name === 'HOME')
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      })
     }
   }
 }

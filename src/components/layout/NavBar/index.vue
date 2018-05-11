@@ -27,19 +27,25 @@ import $ from 'jquery';
 import M from 'materialize-css'
 
 export default {
-  props: ['routes'],
-  mounted: function () {
+  mounted () {
     this.$nextTick(function () {
       M.Sidenav.init($('.sidenav'))
     })
-  }
+  },
+  props: ['routes']
 }
 </script>
 
 <style lang="scss" scoped>
 @import "src/assets/scss/colors.scss";
 
+.navbar-fixed {
+  position: fixed;
+}
+
 nav {
+  background-color: transparent;
+
   .brand-logo {
     font-family: 'Amatic SC';
     color: $primary-color;
