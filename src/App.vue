@@ -103,7 +103,7 @@ body {
 }
 
 .fade-enter-active, .fade-leave-active {
-  transition: opacity 1.5s
+  transition: opacity 0.75s
 }
 
 .fade-enter, .fade-leave-to {
