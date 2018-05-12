@@ -11,8 +11,8 @@
 
 <script>
 import 'materialize-css/sass/materialize.scss'
-import NavBar from './components/layout/NavBar'
-import MainContent from './components/layout/MainContent'
+import NavBar from './components/NavBar'
+import MainContent from './components/MainContent'
 import routes from './router/routes'
 
 export default {
@@ -44,7 +44,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "src/assets/scss/colors.scss";
+@import 'src/assets/scss/colors.scss';
 
 @font-face {
   font-family: 'Open Sans Condensed';
@@ -55,6 +55,11 @@ export default {
 @font-face {
   font-family: 'Amatic SC';
   src: url('./assets/fonts/AmaticSC-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Muli';
+  src: url('./assets/fonts/Muli-Regular.ttf');
 }
 
 @font-face {
@@ -93,7 +98,6 @@ export default {
 * {
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 300;
-  color: $primary-color;
 }
 
 body {

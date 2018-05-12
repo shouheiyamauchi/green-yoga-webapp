@@ -37,7 +37,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "src/assets/scss/colors.scss";
+@import 'src/assets/scss/colors.scss';
 
 .navbar-fixed {
   position: fixed;
@@ -58,6 +58,7 @@ nav {
 
   ul a {
     color: $primary-color;
+    font-size: small;
 
     &:hover {
       background-color: $secondary-color;

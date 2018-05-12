@@ -11,7 +11,7 @@ const importAll = r => {
     return images
 }
 
-const images = importAll(require.context('../../../../assets/images/header/', false, /\.jpg$/));
+const images = importAll(require.context('../../../assets/images/header/', false, /\.jpg$/));
 
 export default {
   created () {
