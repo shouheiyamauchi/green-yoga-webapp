@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper white">
-          <a href="#!" class="brand-logo">Green Yoga</a>
+    <div class="fade-animation navbar-fixed">
+      <nav :class="{ 'transparent-nav': transparentNav }">
+        <div class="nav-wrapper" :class="{ white: !transparentNav }">
+          <a href="#!" class="brand-logo" :class="{ 'white-logo': transparentNav }">Green Yoga</a>
           <a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
             <li v-for="(route, index) in routes" :key="index">
@@ -27,17 +27,57 @@ import $ from 'jquery';
 import M from 'materialize-css'
 
 export default {
+  created () {
+    window.addEventListener('scroll', this.toggleNavTransparency)
+  },
   mounted () {
     this.$nextTick(function () {
       M.Sidenav.init($('.sidenav'))
     })
   },
-  props: ['routes']
+  detroyed () {
+    window.removeEventListener('scroll', this.toggleNavTransparency)
+  },
+  props: ['routes'],
+  data () {
+    return {
+      transparentNav: true
+    }
+  },
+  methods: {
+    toggleNavTransparency () {
+      this.transparentNav = window.scrollY < 300
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
 @import 'src/assets/scss/colors.scss';
+
+.fade-animation * {
+  transition: all 0.5s ease;
+}
+
+.transparent-nav {
+  background-color: transparent !important;
+  -webkit-box-shadow: initial;
+  box-shadow: initial;
+
+  a {
+    background-color: transparent !important;
+    color: $border-color;
+  }
+
+  .router-link-exact-active {
+    background-color: transparent !important;
+    color: white !important;
+  }
+}
+
+.white-logo {
+  color: white !important;
+}
 
 .navbar-fixed {
   position: fixed;
