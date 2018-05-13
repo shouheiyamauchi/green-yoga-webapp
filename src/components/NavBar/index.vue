@@ -3,7 +3,7 @@
     <div class="fade-animation navbar-fixed">
       <nav :class="{ 'transparent-nav': transparentNav }">
         <div class="nav-wrapper" :class="{ white: !transparentNav }">
-          <a href="#!" class="brand-logo" :class="{ 'white-logo': transparentNav }">Green Yoga</a>
+          <a href="#" class="brand-logo" :class="{ 'white-logo': transparentNav }" v-on:click="scrollToTop">Green Yoga</a>
           <a href="#" data-target="mobile-menu" class="sidenav-trigger" :class="{ 'white-menu-trigger': transparentNav }"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
             <li v-for="(route, index) in routes" :key="index">
@@ -51,6 +51,15 @@ export default {
     },
     closeSideNav () {
       window.sidenav.close()
+    },
+    scrollToTop (e) {
+      e.preventDefault()
+
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      })
     }
   }
 }
