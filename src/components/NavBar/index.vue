@@ -4,7 +4,7 @@
       <nav :class="{ 'transparent-nav': transparentNav }">
         <div class="nav-wrapper" :class="{ white: !transparentNav }">
           <a href="#!" class="brand-logo" :class="{ 'white-logo': transparentNav }">Green Yoga</a>
-          <a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <a href="#" data-target="mobile-menu" class="sidenav-trigger" :class="{ 'white-menu-trigger': transparentNav }"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
             <li v-for="(route, index) in routes" :key="index">
               <router-link :to="route.path">{{ route.name }}</router-link>
@@ -14,9 +14,9 @@
       </nav>
     </div>
 
-    <ul class="sidenav" id="mobile-menu">
+    <ul class="sidenav" :class="{ 'white-menu': transparentNav }" id="mobile-menu">
       <li v-for="(route, index) in routes" :key="index">
-        <router-link :to="route.path">{{ route.name }}</router-link>
+        <router-link :to="route.path" v-on:click.native="closeSideNav">{{ route.name }}</router-link>
       </li>
     </ul>
   </div>
@@ -32,7 +32,8 @@ export default {
   },
   mounted () {
     this.$nextTick(function () {
-      M.Sidenav.init($('.sidenav'))
+      const sidenav = M.Sidenav.init($('.sidenav'))
+      window.sidenav = sidenav[0]
     })
   },
   detroyed () {
@@ -47,6 +48,9 @@ export default {
   methods: {
     toggleNavTransparency () {
       this.transparentNav = window.scrollY < 300
+    },
+    closeSideNav () {
+      window.sidenav.close()
     }
   }
 }
@@ -79,6 +83,12 @@ export default {
   color: white !important;
 }
 
+.white-menu-trigger {
+  i {
+    color: white !important;
+  }
+}
+
 .navbar-fixed {
   position: fixed;
 }
@@ -107,7 +117,7 @@ nav {
   }
 
   .sidenav-trigger i {
-    color: $secondary-color;
+    color: black;
   }
 }
 
