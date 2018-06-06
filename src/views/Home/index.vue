@@ -33,7 +33,7 @@ export default {
   mounted () {
     this.$nextTick(() => {
       this.changeBackground()
-      setInterval(this.changeBackground, 3500)
+      if (images.length > 1) setInterval(this.changeBackground, 3500)
     })
   },
   components: {
@@ -42,16 +42,13 @@ export default {
   data () {
     return {
       backgroundImage: '',
+      currentImageIndex: 0
     }
   },
   methods: {
     changeBackground () {
-      let backgroundImage = this.backgroundImage
-
-      // prevent randomly selecting the same as previous image
-      while (backgroundImage === this.backgroundImage) {
-        this.backgroundImage = images[Math.floor(Math.random() * images.length)]
-      }
+      this.backgroundImage = images[this.currentImageIndex]
+      this.currentImageIndex = this.currentImageIndex === images.length - 1 ? 0 : this.currentImageIndex + 1
     }
   }
 }

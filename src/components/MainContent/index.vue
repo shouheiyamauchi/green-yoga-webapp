@@ -4,6 +4,7 @@
     <div class="container">
       <router-view></router-view>
     </div>
+    <div class="section"></div>
     <content-footer></content-footer>
   </div>
 </template>
@@ -32,6 +33,6 @@ export default {
 }
 
 .container {
-  min-height: calc(100vh - 450px);
+  min-height: calc(100vh - 650px);
 }
 </style>

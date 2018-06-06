@@ -57,7 +57,7 @@ export default {
   height: 17px;
   width: 17px;
   transition: all 1s ease;
-  color: $faded-color;
+  color: $lighter-grey-color;
   margin: 0 4px;
   padding: 2px;
   border-radius: 3px;
@@ -65,13 +65,13 @@ export default {
   line-height: 15px;
 
   &:hover {
-    background-color: $faded-color;
+    background-color: $lighter-grey-color;
     color: white;
     border-color: white;
   }
 }
 
 small {
-  color: $faded-color;
+  color: $lighter-grey-color;
 }
 </style>

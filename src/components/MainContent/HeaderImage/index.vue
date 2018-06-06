@@ -44,7 +44,7 @@ export default {
 }
 
 .header-image {
-  height: 375px;
+  height: 550px;
   width: 100%;
   background-repeat: no-repeat;
   background-position: 50% 50%;

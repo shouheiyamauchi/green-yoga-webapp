@@ -79,7 +79,11 @@ export default {
 
   a {
     background-color: transparent !important;
-    color: $border-color;
+    color: $faded-grey-color;
+
+    &:hover {
+      color: white;
+    }
   }
 
   .router-link-exact-active {
@@ -107,7 +111,7 @@ nav {
 
   .brand-logo {
     font-family: 'Amatic SC';
-    color: $primary-color;
+    color: $faded-blue-color;
     padding-left: 10px;
 
     @media only screen and (max-width: 992px) {
@@ -116,32 +120,33 @@ nav {
   }
 
   ul a {
-    color: $primary-color;
+    color: $lighter-blue-color;
     font-size: small;
 
     &:hover {
-      background-color: $secondary-color;
-      color: white;
+      background-color: transparent;
+      color: $faded-blue-color;
     }
   }
 
   .sidenav-trigger i {
-    color: black;
+    color: $faded-blue-color;
   }
 }
 
 .sidenav li > a {
+  color: $faded-blue-color;
   -webkit-transition: background-color .3s;
   transition: background-color .3s;
 
   &:hover {
-    background-color: $secondary-color;
+    background-color: $faded-blue-color;
     color: white;
   }
 }
 
 .router-link-exact-active {
-  background-color: $secondary-color;
-  color: white;
+  color: white !important;
+  background-color: $faded-blue-color !important;
 }
 </style>

@@ -20,11 +20,11 @@ export default [
     path: '/gallery',
     component: Gallery
   },
-  {
-    name: 'TIMETABLE',
-    path: '/timetable',
-    component: Timetable
-  },
+  // {
+  //   name: 'TIMETABLE',
+  //   path: '/timetable',
+  //   component: Timetable
+  // },
   {
     name: 'CONTACT ME',
     path: '/contact-me',
