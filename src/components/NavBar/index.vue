@@ -135,7 +135,7 @@ nav {
 }
 
 .sidenav li > a {
-  color: $faded-blue-color;
+  color: $lighter-blue-color;
   -webkit-transition: background-color .3s;
   transition: background-color .3s;
 
@@ -143,10 +143,12 @@ nav {
     background-color: $faded-blue-color;
     color: white;
   }
+
+  // TODO make side nav have background color
 }
 
 .router-link-exact-active {
-  color: white !important;
-  background-color: $faded-blue-color !important;
+  color: $faded-blue-color !important;
+  background-color: transparent !important;
 }
 </style>
