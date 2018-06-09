@@ -28,4 +28,8 @@ export default {
 .card-title {
   font-family: 'Muli', sans-serif;
 }
+
+.card {
+  background-color: $background-color;
+}
 </style>

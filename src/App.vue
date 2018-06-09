@@ -113,8 +113,4 @@ body {
 .fade-enter, .fade-leave-to {
   opacity: 0;
 }
-
-.card {
-  background-color: #fbf8f5;
-}
 </style>

@@ -63,4 +63,8 @@ export default {
 .materialize-textarea {
   min-height: 100px;
 }
+
+.card {
+  background-color: $background-color;
+}
 </style>
