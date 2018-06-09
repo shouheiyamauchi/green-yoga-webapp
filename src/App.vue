@@ -95,7 +95,7 @@ export default {
   font-feature-settings: 'liga';
 }
 
-* {
+*, button, input, textarea {
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 300;
 }
@@ -112,5 +112,9 @@ body {
 
 .fade-enter, .fade-leave-to {
   opacity: 0;
+}
+
+.card {
+  background-color: #fbf8f5;
 }
 </style>
