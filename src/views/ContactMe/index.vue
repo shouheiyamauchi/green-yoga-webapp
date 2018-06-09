@@ -60,6 +60,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import 'src/assets/scss/colors.scss';
+
 .materialize-textarea {
   min-height: 100px;
 }

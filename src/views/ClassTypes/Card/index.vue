@@ -25,6 +25,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import 'src/assets/scss/colors.scss';
+
 .card-title {
   font-family: 'Muli', sans-serif;
 }
