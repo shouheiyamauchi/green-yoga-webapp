@@ -10,7 +10,6 @@
 </template>
 
 <script>
-import 'materialize-css/sass/materialize.scss'
 import NavBar from './components/NavBar'
 import MainContent from './components/MainContent'
 import routes from './router/routes'
@@ -44,6 +43,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import '~materialize-css/sass/materialize.scss';
 @import 'src/assets/scss/colors.scss';
 
 @font-face {
