@@ -73,12 +73,12 @@ export default {
 }
 
 .transparent-nav {
-  background-color: transparent !important;
+  background-color: transparent;
   -webkit-box-shadow: initial;
   box-shadow: initial;
 
   a {
-    background-color: transparent !important;
+    background-color: transparent;
     color: $faded-grey-color;
 
     &:hover {
@@ -87,8 +87,8 @@ export default {
   }
 
   .router-link-exact-active {
-    background-color: transparent !important;
-    color: white !important;
+    background-color: transparent;
+    color: white;
   }
 }
 
@@ -134,21 +134,27 @@ nav {
   }
 }
 
-.sidenav li > a {
-  color: $lighter-blue-color;
-  -webkit-transition: background-color .3s;
-  transition: background-color .3s;
+.sidenav li {
+  > a {
+    color: $lighter-blue-color;
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+    font-weight: 300;
 
-  &:hover {
+    &:hover {
+      background-color: $faded-blue-color;
+      color: white;
+    }
+  }
+
+  .router-link-exact-active {
     background-color: $faded-blue-color;
     color: white;
   }
-
-  // TODO make side nav have background color
 }
 
 .router-link-exact-active {
-  color: $faded-blue-color !important;
-  background-color: transparent !important;
+  color: $faded-blue-color;
+  background-color: transparent;
 }
 </style>

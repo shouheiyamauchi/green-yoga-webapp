@@ -53,6 +53,18 @@ export default {
 }
 
 @font-face {
+  font-family: 'Open Sans Condensed';
+  src: url('./assets/fonts/OpenSansCondensed-Bold.ttf');
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'Open Sans Condensed';
+  src: url('./assets/fonts/OpenSansCondensed-LightItalic.ttf');
+  font-style: italic;
+}
+
+@font-face {
   font-family: 'Amatic SC';
   src: url('./assets/fonts/AmaticSC-Regular.ttf');
 }
