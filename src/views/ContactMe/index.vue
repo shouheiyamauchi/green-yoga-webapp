@@ -68,6 +68,7 @@ export default {
   methods: {
     handleSubmit () {
       this.validation = { ...FORM_FIELDS }
+      this.serverSuccess = ''
       this.serverError = ''
       const validForm = this.validateForm()
 
