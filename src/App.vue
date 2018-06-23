@@ -14,8 +14,6 @@ import NavBar from './components/NavBar'
 import MainContent from './components/MainContent'
 import routes from './router/routes'
 
-console.log(process.env.NODE_ENV)
-
 export default {
   components: {
     NavBar,
@@ -112,6 +110,10 @@ export default {
 *, button, input, textarea {
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 300;
+}
+
+button {
+  background-color: $faded-blue-color !important;
 }
 
 body {
