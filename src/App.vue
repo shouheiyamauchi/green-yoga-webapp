@@ -14,6 +14,8 @@ import NavBar from './components/NavBar'
 import MainContent from './components/MainContent'
 import routes from './router/routes'
 
+console.log(process.env.NODE_ENV)
+
 export default {
   components: {
     NavBar,
