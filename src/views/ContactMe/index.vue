@@ -6,8 +6,8 @@
       <div class="container">
         <div class="row">
           <form id="contact-me-form" class="col s12" @submit.prevent="handleSubmit">
-            <p class="helper-text success">{{ serverSuccess }}</p>
-            <p class="helper-text">{{ serverError }}</p>
+            <p class="helper-text success center-align">{{ serverSuccess }}</p>
+            <p class="helper-text center-align">{{ serverError }}</p>
             <div class="row">
               <div class="input-field col s12 m6 l6">
                 <input v-model="form.name" type="text" />
@@ -91,19 +91,19 @@ export default {
       return !invalid
     },
     validEmail (emailString) {
-      const emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       return emailRegex.test(emailString)
     },
     submitMessage () {
       this.loading = true
 
       axios.post(API_URL + 'mailer', qs.stringify(this.form))
-        .then(response => {
+        .then(() => {
           this.loading = false
           this.form = { ...FORM_FIELDS }
           this.serverSuccess = 'Thank you for your message! I will get back to you as soon as possible.'
         })
-        .catch(error => {
+        .catch(() => {
           this.loading = false
           this.serverError = 'Oops! There was an error while trying to send the message. Please try again later.'
         })
@@ -124,10 +124,10 @@ export default {
 }
 
 .helper-text {
-  color: red;
+  color: $red-color;
 }
 
 .success {
-  color: $faded-blue-color;
+  color: $lighter-grey-color;
 }
 </style>

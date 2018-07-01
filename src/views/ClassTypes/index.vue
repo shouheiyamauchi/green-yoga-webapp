@@ -9,10 +9,10 @@
 import PageTitle from '../../components/PageTitle'
 import Card from './Card'
 
-import imageVin1 from '../../assets/images/types/vin1.jpg'
-import imageVin2 from '../../assets/images/types/vin2.jpg'
+import imageVinyasa from '../../assets/images/types/vinyasa.jpg'
 import imagePower from '../../assets/images/types/power.jpg'
 import imageGentle from '../../assets/images/types/gentle.jpg'
+import imageRestorativeYin from '../../assets/images/types/restorative-yin.jpg'
 
 export default {
   components: {
@@ -23,14 +23,9 @@ export default {
     return {
       classTypes: [
         {
-          image: imageVin1,
-          title: "Vinyasa Flow Level 1",
-          description: "In Vinyasa flow classes, students coordinate movement with their breath to flow from one pose to the another in a dance-like way. Vinyasa flow is a modern style of yoga influenced from all types of traditional yoga including Ashtanga and Iyengar. It starts off slow to warm up the body and will lead you to experience challenging poses with a deeper connection with the breath. There will be a section at the end to cool the body down so that you are able to fully relax and absorb all the sensations. Level 1 class is for both new yogis who have never practiced yoga before as well as those who have been practicing yoga for a while. This class focuses on each pose and the alignments including sun salutation A & B and standing balancing poses. You will also learn how to use props like blocks and straps to support your body."
-        },
-        {
-          image: imageVin2,
-          title: "Vinyasa Flow Level 2",
-          description: "In Vinyasa flow classes, students coordinate movement with their breath to flow from one pose to the another in a dance-like way. Vinyasa flow is a modern style of yoga influenced from all types of traditional yoga including Ashtanga and Iyengar. It starts off slow to warm up the body and will lead you to experience challenging poses with a deeper connection with the breath. There will be a section at the end to cool the body down so that you are able to fully relax and absorb all the sensations. Level 2 class is for more experienced students who have practiced yoga for a while and are already aware of a number of poses. It consists of flowing sequences with advanced asanas including arm balances, backbending and inversions."
+          image: imageVinyasa,
+          title: "Vinyasa Flow",
+          description: "In Vinyasa flow classes, students coordinate movement with their breath to flow from one pose to the another in a dance-like way. Vinyasa flow is a modern style of yoga influenced from all types of traditional yoga including Ashtanga and Iyengar. It starts off slow to warm up the body and will lead you to experience challenging poses with a deeper connection with the breath. There will be a section at the end to cool the body down so that you are able to fully relax and absorb all the sensations."
         },
         {
           image: imagePower,
@@ -41,6 +36,11 @@ export default {
           image: imageGentle,
           title: "Gentle Flow",
           description: "These classes are designed to accommodate people who have limited strength, flexibility or stamina by providing gentler and modified versions of the poses. The sequence is simple, balanced in its variety and, most importantly, provides safe and approachable steps with props like blocks, straps and blankets. Gentle flow is slower-paced but still require concentration and effort. Subtle doesn’t necessarily mean easy. They will gradually stretch and strengthen, and build outer and inner balance. Perfect for beginners to Yoga, those coming back from injury, pre/post natal mothers, our more mature members and of course those who just want to experience a gentler and slower paced Yoga practice."
+        },
+        {
+          image: imageRestorativeYin,
+          title: "Restorative / Yin and Yoga Nidra",
+          description: "In Restorative and Yin classes, poses are held for about three to five minutes at a time in order to the stretch the connective tissue around the joints which also brings the practitioner to a state of mental calmness. You will use props like bolster, blocks and blankets to support your body. Yoga Nidra is a systematic form of guided relaxation that typically is done for 15 to 30 minutes at a time. It will lead you to a deep relaxation state of consciousness between waking and sleeping, like the \"going-to-sleep\" stage which has a effect on the body, the energies and the mind."
         }
       ]
     }
